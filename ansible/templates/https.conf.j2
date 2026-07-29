@@ -1,0 +1,22 @@
+# 20260729-1210_017
+# @CST:add:update_7d3a_ansible_nginx:https_conf
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    server_name {{ server_name }};
+
+    ssl_certificate     {{ cert_dir }}/nginx.crt;
+    ssl_certificate_key {{ cert_dir }}/nginx.key;
+    ssl_protocols       TLSv1.2 TLSv1.3;
+    ssl_ciphers         HIGH:!aNULL:!MD5;
+
+    root /usr/share/nginx/html;
+    index index.html;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name {{ server_name }};
+    return 301 https://$host$request_uri;
+}
