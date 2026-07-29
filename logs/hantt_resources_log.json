@@ -13,21 +13,72 @@
     "applied_local": "2026-07-29 ~12:50 NZST",
     "state_file": "~/hantt/git/terraform/terraform.tfstate",
     "resources": {
-      "vpc": { "id": "vpc-05f0938cb4149bd57", "cidr": "10.20.0.0/16", "name": "hantt-practical-vpc" },
-      "internet_gateway": { "id": "igw-0b9633240a01cfd0b", "name": "hantt-practical-igw" },
+      "vpc": {
+        "id": "vpc-05f0938cb4149bd57",
+        "cidr": "10.20.0.0/16",
+        "name": "hantt-practical-vpc"
+      },
+      "internet_gateway": {
+        "id": "igw-0b9633240a01cfd0b",
+        "name": "hantt-practical-igw"
+      },
       "subnets_public": [
-        { "id": "subnet-07b6c6ac532ec63cb", "cidr": "10.20.1.0/24", "az": "ap-southeast-2a", "name": "hantt-practical-public-1" },
-        { "id": "subnet-09a432c165ad62558", "cidr": "10.20.2.0/24", "az": "ap-southeast-2b", "name": "hantt-practical-public-2" }
+        {
+          "id": "subnet-07b6c6ac532ec63cb",
+          "cidr": "10.20.1.0/24",
+          "az": "ap-southeast-2a",
+          "name": "hantt-practical-public-1"
+        },
+        {
+          "id": "subnet-09a432c165ad62558",
+          "cidr": "10.20.2.0/24",
+          "az": "ap-southeast-2b",
+          "name": "hantt-practical-public-2"
+        }
       ],
       "subnets_private": [
-        { "id": "subnet-0f403fd5cc75aaa69", "cidr": "10.20.11.0/24", "az": "ap-southeast-2a", "name": "hantt-practical-private-1" },
-        { "id": "subnet-0a4505391e47ef22e", "cidr": "10.20.12.0/24", "az": "ap-southeast-2b", "name": "hantt-practical-private-2" }
+        {
+          "id": "subnet-0f403fd5cc75aaa69",
+          "cidr": "10.20.11.0/24",
+          "az": "ap-southeast-2a",
+          "name": "hantt-practical-private-1"
+        },
+        {
+          "id": "subnet-0a4505391e47ef22e",
+          "cidr": "10.20.12.0/24",
+          "az": "ap-southeast-2b",
+          "name": "hantt-practical-private-2"
+        }
       ],
-      "route_table_public": { "id": "rtb-0b44e97b94488ab34", "associations": ["rtbassoc-023f0ce3accd9b095", "rtbassoc-00e3fd23c64e364af"] },
-      "security_group": { "id": "sg-0f3c2458ecc6b0bc0", "name": "hantt-practical-nginx-sg", "ingress": [22, 80, 443] },
-      "iam_role": { "name": "hantt-practical-ec2-role", "policies": ["AmazonSSMManagedInstanceCore"] },
-      "iam_instance_profile": { "name": "hantt-practical-ec2-profile" },
-      "key_pair": { "name": "hantt-practical-key", "pem_local": "~/hantt/git/terraform/hantt-practical-key.pem" },
+      "route_table_public": {
+        "id": "rtb-0b44e97b94488ab34",
+        "associations": [
+          "rtbassoc-023f0ce3accd9b095",
+          "rtbassoc-00e3fd23c64e364af"
+        ]
+      },
+      "security_group": {
+        "id": "sg-0f3c2458ecc6b0bc0",
+        "name": "hantt-practical-nginx-sg",
+        "ingress": [
+          22,
+          80,
+          443
+        ]
+      },
+      "iam_role": {
+        "name": "hantt-practical-ec2-role",
+        "policies": [
+          "AmazonSSMManagedInstanceCore"
+        ]
+      },
+      "iam_instance_profile": {
+        "name": "hantt-practical-ec2-profile"
+      },
+      "key_pair": {
+        "name": "hantt-practical-key",
+        "pem_local": "~/hantt/git/terraform/hantt-practical-key.pem"
+      },
       "ec2_instance": {
         "id": "i-0e327d3391cc39942",
         "type": "t3.micro",
@@ -46,7 +97,13 @@
     "note": "Configures nginx + self-signed HTTPS on i-0e327d3391cc39942 only"
   },
   "phase3_packer": {
-    "status": "pending",
-    "expected_resources": ["Linux AMI + snapshot (from packer build)", "temporary builder EC2 (auto-terminated)", "Windows EC2 (via Terraform addition)"]
+    "status": "linux AMI complete",
+    "ami_id": "ami-06b7a47510e14e17f",
+    "ami_name": "hantt-nginx-https-1785287779",
+    "snapshot_id": "snap-0d7e4369b84649113",
+    "built_local": "2026-07-29 ~13:20 NZST",
+    "build_time": "6m07s",
+    "teardown_note": "deregister AMI + delete snapshot manually - not tracked by terraform state",
+    "windows_leg": "pending"
   }
 }
