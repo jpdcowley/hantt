@@ -1,0 +1,35 @@
+[33mcommit 919624da836658a7374e728460ea1d0834e6a471[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: jpdcowley <jpdcowley@gmail.com>
+Date:   Wed Jul 29 14:03:27 2026 +1200
+
+    add evidence script, AMI verify log and outputs
+
+[33mcommit 2f11d4784fd6190680f8b1c4cdb454019a821189[m
+Author: jpdcowley <jpdcowley@gmail.com>
+Date:   Wed Jul 29 13:46:35 2026 +1200
+
+    add Python AMI verification script
+
+[33mcommit 15d2ab906a30c3ab5a8e3ba87e5ff72cea24f419[m
+Author: jpdcowley <jpdcowley@gmail.com>
+Date:   Wed Jul 29 13:37:03 2026 +1200
+
+    add Packer template and log baked nginx HTTPS AMI
+
+[33mcommit aaf4ff5c8eca490051a7e0563f6de8ffe12a06c7[m
+Author: jpdcowley <jpdcowley@gmail.com>
+Date:   Wed Jul 29 13:06:36 2026 +1200
+
+    add Ansible nginx HTTPS playbook, inventory and resource logs
+
+[33mcommit d7f4b58180af413a85c8cecadfdf6ed571a6e2f1[m
+Author: jpdcowley <jpdcowley@gmail.com>
+Date:   Wed Jul 29 12:46:11 2026 +1200
+
+    commit provider lock file, stop ignoring it
+
+[33mcommit f59148a43e5adc3206e30921fc24a0bcf4a894f2[m
+Author: jpdcowley <jpdcowley@gmail.com>
+Date:   Wed Jul 29 12:27:19 2026 +1200
+
+    initial scaffold: terraform, ansible, packer layout

@@ -1,0 +1,10 @@
+2026-07-29 13:54:37 ==> Launching test instance from ami-06b7a47510e14e17f
+2026-07-29 13:54:38     instance: i-01f5f188f868e8054
+2026-07-29 13:54:38 ==> Waiting for running state...
+2026-07-29 13:54:54     public IP: 3.25.54.118
+2026-07-29 13:54:54 ==> Waiting for nginx over HTTPS (up to 90s)...
+2026-07-29 13:55:00     HTTP 200 after attempt 2 - zero-touch AMI verified!
+2026-07-29 13:55:00     page title: Hantt Practical - nginx over HTTPS
+2026-07-29 13:55:00     screenshot: browser -> https://3.25.54.118
+2026-07-29 13:55:00     cleanup:    python3 verify_ami.py --terminate
+2026-07-29 13:55:00     log:        /home/maccelari/hantt/logs/verify_ami_20260729_135437.log
