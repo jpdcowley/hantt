@@ -1,0 +1,64 @@
+# 20260729-1720_057
+# @CST:add:update_8f2a_windows_leg:playbook
+# Same nginx-over-HTTPS configuration, Windows Server target via WinRM
+---
+- name: Configure nginx with HTTPS on Windows
+  hosts: nginx_windows
+  gather_facts: true
+  vars:
+    nginx_root: 'C:\nginx'
+    cert_dir: 'C:\nginx\ssl'
+
+  tasks:
+    - name: Install chocolatey packages (nginx + openssl)
+      chocolatey.chocolatey.win_chocolatey:
+        name:
+          - nginx
+          - openssl.light
+        state: present
+        install_args: "/Package:{{ nginx_root }}"
+
+    - name: Locate nginx install directory
+      ansible.windows.win_find:
+        paths: 'C:\tools'
+        file_type: directory
+        patterns: 'nginx*'
+      register: nginx_dirs
+
+    - name: Set nginx home fact
+      ansible.builtin.set_fact:
+        nginx_home: "{{ nginx_dirs.files[0].path if nginx_dirs.files else nginx_root }}"
+
+    - name: Create certificate directory
+      ansible.windows.win_file:
+        path: "{{ cert_dir }}"
+        state: directory
+
+    - name: Generate self-signed certificate (idempotent)
+      ansible.windows.win_shell: |
+        & "C:\Program Files\OpenSSL\bin\openssl.exe" req -x509 -nodes -newkey rsa:2048 `
+          -keyout "{{ cert_dir }}\nginx.key" -out "{{ cert_dir }}\nginx.crt" `
+          -days 365 -subj "/C=NZ/O=Hantt Practical/CN={{ ansible_host }}"
+      args:
+        creates: "{{ cert_dir }}\\nginx.crt"
+
+    - name: Deploy index page (same template as Linux)
+      ansible.windows.win_template:
+        src: templates/index.html.j2
+        dest: "{{ nginx_home }}\\html\\index.html"
+
+    - name: Deploy HTTPS configuration
+      ansible.windows.win_template:
+        src: templates/nginx-windows.conf.j2
+        dest: "{{ nginx_home }}\\conf\\nginx.conf"
+
+    - name: Validate nginx configuration
+      ansible.windows.win_shell: |
+        & "{{ nginx_home }}\nginx.exe" -t -p "{{ nginx_home }}"
+      changed_when: false
+
+    - name: Ensure nginx service is running
+      ansible.windows.win_service:
+        name: nginx
+        state: restarted
+        start_mode: auto

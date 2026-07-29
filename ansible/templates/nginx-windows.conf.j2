@@ -1,0 +1,31 @@
+# 20260729-1720_057
+# @CST:add:update_8f2a_windows_leg:nginx_conf
+worker_processes  1;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    server {
+        listen 443 ssl;
+        server_name {{ ansible_host }};
+
+        ssl_certificate     {{ cert_dir | replace('\\', '/') }}/nginx.crt;
+        ssl_certificate_key {{ cert_dir | replace('\\', '/') }}/nginx.key;
+        ssl_protocols       TLSv1.2 TLSv1.3;
+        ssl_ciphers         HIGH:!aNULL:!MD5;
+
+        root html;
+        index index.html;
+    }
+
+    server {
+        listen 80;
+        server_name {{ ansible_host }};
+        return 301 https://$host$request_uri;
+    }
+}
