@@ -1,0 +1,808 @@
+{
+  "captured_at": "2026-07-29T14:05:11.352456",
+  "region": "ap-southeast-2",
+  "project_tag": "hantt-practical",
+  "vpcs": [
+    {
+      "OwnerId": "561208252542",
+      "InstanceTenancy": "default",
+      "CidrBlockAssociationSet": [
+        {
+          "AssociationId": "vpc-cidr-assoc-0d320a6e58735471d",
+          "CidrBlock": "10.20.0.0/16",
+          "CidrBlockState": {
+            "State": "associated"
+          }
+        }
+      ],
+      "IsDefault": false,
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "hantt-practical-vpc"
+        },
+        {
+          "Key": "ManagedBy",
+          "Value": "terraform"
+        },
+        {
+          "Key": "Project",
+          "Value": "hantt-practical"
+        }
+      ],
+      "BlockPublicAccessStates": {
+        "InternetGatewayBlockMode": "off"
+      },
+      "VpcId": "vpc-05f0938cb4149bd57",
+      "State": "available",
+      "CidrBlock": "10.20.0.0/16",
+      "DhcpOptionsId": "dopt-096003066ebae2003"
+    }
+  ],
+  "subnets": [
+    {
+      "AvailabilityZoneId": "apse2-az1",
+      "MapCustomerOwnedIpOnLaunch": false,
+      "OwnerId": "561208252542",
+      "AssignIpv6AddressOnCreation": false,
+      "Ipv6CidrBlockAssociationSet": [],
+      "Tags": [
+        {
+          "Key": "ManagedBy",
+          "Value": "terraform"
+        },
+        {
+          "Key": "Project",
+          "Value": "hantt-practical"
+        },
+        {
+          "Key": "Name",
+          "Value": "hantt-practical-public-1"
+        }
+      ],
+      "SubnetArn": "arn:aws:ec2:ap-southeast-2:561208252542:subnet/subnet-07b6c6ac532ec63cb",
+      "EnableDns64": false,
+      "Ipv6Native": false,
+      "PrivateDnsNameOptionsOnLaunch": {
+        "HostnameType": "ip-name",
+        "EnableResourceNameDnsARecord": false,
+        "EnableResourceNameDnsAAAARecord": false
+      },
+      "BlockPublicAccessStates": {
+        "InternetGatewayBlockMode": "off"
+      },
+      "SubnetId": "subnet-07b6c6ac532ec63cb",
+      "State": "available",
+      "VpcId": "vpc-05f0938cb4149bd57",
+      "CidrBlock": "10.20.1.0/24",
+      "AvailableIpAddressCount": 249,
+      "AvailabilityZone": "ap-southeast-2a",
+      "DefaultForAz": false,
+      "MapPublicIpOnLaunch": true
+    },
+    {
+      "AvailabilityZoneId": "apse2-az3",
+      "MapCustomerOwnedIpOnLaunch": false,
+      "OwnerId": "561208252542",
+      "AssignIpv6AddressOnCreation": false,
+      "Ipv6CidrBlockAssociationSet": [],
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "hantt-practical-private-2"
+        },
+        {
+          "Key": "Project",
+          "Value": "hantt-practical"
+        },
+        {
+          "Key": "ManagedBy",
+          "Value": "terraform"
+        }
+      ],
+      "SubnetArn": "arn:aws:ec2:ap-southeast-2:561208252542:subnet/subnet-0a4505391e47ef22e",
+      "EnableDns64": false,
+      "Ipv6Native": false,
+      "PrivateDnsNameOptionsOnLaunch": {
+        "HostnameType": "ip-name",
+        "EnableResourceNameDnsARecord": false,
+        "EnableResourceNameDnsAAAARecord": false
+      },
+      "BlockPublicAccessStates": {
+        "InternetGatewayBlockMode": "off"
+      },
+      "SubnetId": "subnet-0a4505391e47ef22e",
+      "State": "available",
+      "VpcId": "vpc-05f0938cb4149bd57",
+      "CidrBlock": "10.20.12.0/24",
+      "AvailableIpAddressCount": 251,
+      "AvailabilityZone": "ap-southeast-2b",
+      "DefaultForAz": false,
+      "MapPublicIpOnLaunch": false
+    },
+    {
+      "AvailabilityZoneId": "apse2-az3",
+      "MapCustomerOwnedIpOnLaunch": false,
+      "OwnerId": "561208252542",
+      "AssignIpv6AddressOnCreation": false,
+      "Ipv6CidrBlockAssociationSet": [],
+      "Tags": [
+        {
+          "Key": "ManagedBy",
+          "Value": "terraform"
+        },
+        {
+          "Key": "Name",
+          "Value": "hantt-practical-public-2"
+        },
+        {
+          "Key": "Project",
+          "Value": "hantt-practical"
+        }
+      ],
+      "SubnetArn": "arn:aws:ec2:ap-southeast-2:561208252542:subnet/subnet-09a432c165ad62558",
+      "EnableDns64": false,
+      "Ipv6Native": false,
+      "PrivateDnsNameOptionsOnLaunch": {
+        "HostnameType": "ip-name",
+        "EnableResourceNameDnsARecord": false,
+        "EnableResourceNameDnsAAAARecord": false
+      },
+      "BlockPublicAccessStates": {
+        "InternetGatewayBlockMode": "off"
+      },
+      "SubnetId": "subnet-09a432c165ad62558",
+      "State": "available",
+      "VpcId": "vpc-05f0938cb4149bd57",
+      "CidrBlock": "10.20.2.0/24",
+      "AvailableIpAddressCount": 251,
+      "AvailabilityZone": "ap-southeast-2b",
+      "DefaultForAz": false,
+      "MapPublicIpOnLaunch": true
+    },
+    {
+      "AvailabilityZoneId": "apse2-az1",
+      "MapCustomerOwnedIpOnLaunch": false,
+      "OwnerId": "561208252542",
+      "AssignIpv6AddressOnCreation": false,
+      "Ipv6CidrBlockAssociationSet": [],
+      "Tags": [
+        {
+          "Key": "Project",
+          "Value": "hantt-practical"
+        },
+        {
+          "Key": "Name",
+          "Value": "hantt-practical-private-1"
+        },
+        {
+          "Key": "ManagedBy",
+          "Value": "terraform"
+        }
+      ],
+      "SubnetArn": "arn:aws:ec2:ap-southeast-2:561208252542:subnet/subnet-0f403fd5cc75aaa69",
+      "EnableDns64": false,
+      "Ipv6Native": false,
+      "PrivateDnsNameOptionsOnLaunch": {
+        "HostnameType": "ip-name",
+        "EnableResourceNameDnsARecord": false,
+        "EnableResourceNameDnsAAAARecord": false
+      },
+      "BlockPublicAccessStates": {
+        "InternetGatewayBlockMode": "off"
+      },
+      "SubnetId": "subnet-0f403fd5cc75aaa69",
+      "State": "available",
+      "VpcId": "vpc-05f0938cb4149bd57",
+      "CidrBlock": "10.20.11.0/24",
+      "AvailableIpAddressCount": 251,
+      "AvailabilityZone": "ap-southeast-2a",
+      "DefaultForAz": false,
+      "MapPublicIpOnLaunch": false
+    }
+  ],
+  "internet_gateways": [
+    {
+      "Attachments": [
+        {
+          "State": "available",
+          "VpcId": "vpc-05f0938cb4149bd57"
+        }
+      ],
+      "InternetGatewayId": "igw-0b9633240a01cfd0b",
+      "OwnerId": "561208252542",
+      "Tags": [
+        {
+          "Key": "Project",
+          "Value": "hantt-practical"
+        },
+        {
+          "Key": "ManagedBy",
+          "Value": "terraform"
+        },
+        {
+          "Key": "Name",
+          "Value": "hantt-practical-igw"
+        }
+      ]
+    }
+  ],
+  "route_tables": [
+    {
+      "Associations": [
+        {
+          "Main": false,
+          "RouteTableAssociationId": "rtbassoc-023f0ce3accd9b095",
+          "RouteTableId": "rtb-0b44e97b94488ab34",
+          "SubnetId": "subnet-07b6c6ac532ec63cb",
+          "AssociationState": {
+            "State": "associated"
+          }
+        },
+        {
+          "Main": false,
+          "RouteTableAssociationId": "rtbassoc-00e3fd23c64e364af",
+          "RouteTableId": "rtb-0b44e97b94488ab34",
+          "SubnetId": "subnet-09a432c165ad62558",
+          "AssociationState": {
+            "State": "associated"
+          }
+        }
+      ],
+      "PropagatingVgws": [],
+      "RouteTableId": "rtb-0b44e97b94488ab34",
+      "Routes": [
+        {
+          "DestinationCidrBlock": "10.20.0.0/16",
+          "GatewayId": "local",
+          "Origin": "CreateRouteTable",
+          "State": "active"
+        },
+        {
+          "DestinationCidrBlock": "0.0.0.0/0",
+          "GatewayId": "igw-0b9633240a01cfd0b",
+          "Origin": "CreateRoute",
+          "State": "active"
+        }
+      ],
+      "Tags": [
+        {
+          "Key": "ManagedBy",
+          "Value": "terraform"
+        },
+        {
+          "Key": "Name",
+          "Value": "hantt-practical-public-rt"
+        },
+        {
+          "Key": "Project",
+          "Value": "hantt-practical"
+        }
+      ],
+      "VpcId": "vpc-05f0938cb4149bd57",
+      "OwnerId": "561208252542"
+    }
+  ],
+  "security_groups": [
+    {
+      "GroupId": "sg-0f3c2458ecc6b0bc0",
+      "IpPermissionsEgress": [
+        {
+          "IpProtocol": "-1",
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "Description": "All outbound",
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ],
+      "Tags": [
+        {
+          "Key": "ManagedBy",
+          "Value": "terraform"
+        },
+        {
+          "Key": "Project",
+          "Value": "hantt-practical"
+        },
+        {
+          "Key": "Name",
+          "Value": "hantt-practical-nginx-sg"
+        }
+      ],
+      "VpcId": "vpc-05f0938cb4149bd57",
+      "SecurityGroupArn": "arn:aws:ec2:ap-southeast-2:561208252542:security-group/sg-0f3c2458ecc6b0bc0",
+      "OwnerId": "561208252542",
+      "GroupName": "hantt-practical-nginx-sg",
+      "Description": "SSH + HTTP/HTTPS for nginx host",
+      "IpPermissions": [
+        {
+          "IpProtocol": "tcp",
+          "FromPort": 80,
+          "ToPort": 80,
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "Description": "HTTP",
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        },
+        {
+          "IpProtocol": "tcp",
+          "FromPort": 22,
+          "ToPort": 22,
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "Description": "SSH",
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        },
+        {
+          "IpProtocol": "tcp",
+          "FromPort": 443,
+          "ToPort": 443,
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "Description": "HTTPS",
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ]
+    }
+  ],
+  "instances": [
+    {
+      "Architecture": "x86_64",
+      "BlockDeviceMappings": [
+        {
+          "DeviceName": "/dev/xvda",
+          "Ebs": {
+            "AttachTime": "2026-07-29 00:58:35+00:00",
+            "DeleteOnTermination": true,
+            "Status": "attached",
+            "VolumeId": "vol-085c958446069648e",
+            "EbsCardIndex": 0
+          }
+        }
+      ],
+      "ClientToken": "terraform-7IexkL74ofPiNL1egwWev7Ktkz",
+      "EbsOptimized": false,
+      "EnaSupport": true,
+      "Hypervisor": "xen",
+      "IamInstanceProfile": {
+        "Arn": "arn:aws:iam::561208252542:instance-profile/hantt-practical-ec2-profile",
+        "Id": "AIPAYFKU6LB7ACKWCBUA2"
+      },
+      "NetworkInterfaces": [
+        {
+          "Association": {
+            "IpOwnerId": "amazon",
+            "PublicDnsName": "ec2-54-252-39-1.ap-southeast-2.compute.amazonaws.com",
+            "PublicIp": "54.252.39.1"
+          },
+          "Attachment": {
+            "AttachTime": "2026-07-29 00:58:35+00:00",
+            "AttachmentId": "eni-attach-011a6aed535642cbb",
+            "DeleteOnTermination": true,
+            "DeviceIndex": 0,
+            "Status": "attached",
+            "NetworkCardIndex": 0
+          },
+          "Description": "",
+          "Groups": [
+            {
+              "GroupId": "sg-0f3c2458ecc6b0bc0",
+              "GroupName": "hantt-practical-nginx-sg"
+            }
+          ],
+          "Ipv6Addresses": [],
+          "MacAddress": "02:90:e2:7a:34:0b",
+          "NetworkInterfaceId": "eni-013c1e7ebde6e4ecf",
+          "OwnerId": "561208252542",
+          "PrivateDnsName": "ip-10-20-1-218.ap-southeast-2.compute.internal",
+          "PrivateIpAddress": "10.20.1.218",
+          "PrivateIpAddresses": [
+            {
+              "Association": {
+                "IpOwnerId": "amazon",
+                "PublicDnsName": "ec2-54-252-39-1.ap-southeast-2.compute.amazonaws.com",
+                "PublicIp": "54.252.39.1"
+              },
+              "Primary": true,
+              "PrivateDnsName": "ip-10-20-1-218.ap-southeast-2.compute.internal",
+              "PrivateIpAddress": "10.20.1.218"
+            }
+          ],
+          "SourceDestCheck": true,
+          "Status": "in-use",
+          "SubnetId": "subnet-07b6c6ac532ec63cb",
+          "VpcId": "vpc-05f0938cb4149bd57",
+          "InterfaceType": "interface",
+          "Operator": {
+            "Managed": false
+          }
+        }
+      ],
+      "RootDeviceName": "/dev/xvda",
+      "RootDeviceType": "ebs",
+      "SecurityGroups": [
+        {
+          "GroupId": "sg-0f3c2458ecc6b0bc0",
+          "GroupName": "hantt-practical-nginx-sg"
+        }
+      ],
+      "SourceDestCheck": true,
+      "Tags": [
+        {
+          "Key": "ManagedBy",
+          "Value": "terraform"
+        },
+        {
+          "Key": "Name",
+          "Value": "hantt-practical-nginx"
+        },
+        {
+          "Key": "Project",
+          "Value": "hantt-practical"
+        }
+      ],
+      "VirtualizationType": "hvm",
+      "CpuOptions": {
+        "CoreCount": 1,
+        "ThreadsPerCore": 2
+      },
+      "CapacityReservationSpecification": {
+        "CapacityReservationPreference": "open"
+      },
+      "HibernationOptions": {
+        "Configured": false
+      },
+      "MetadataOptions": {
+        "State": "applied",
+        "HttpTokens": "required",
+        "HttpPutResponseHopLimit": 2,
+        "HttpEndpoint": "enabled",
+        "HttpProtocolIpv6": "disabled",
+        "InstanceMetadataTags": "disabled"
+      },
+      "EnclaveOptions": {
+        "Enabled": false
+      },
+      "BootMode": "uefi-preferred",
+      "PlatformDetails": "Linux/UNIX",
+      "UsageOperation": "RunInstances",
+      "UsageOperationUpdateTime": "2026-07-29 00:58:35+00:00",
+      "PrivateDnsNameOptions": {
+        "HostnameType": "ip-name",
+        "EnableResourceNameDnsARecord": false,
+        "EnableResourceNameDnsAAAARecord": false
+      },
+      "MaintenanceOptions": {
+        "AutoRecovery": "default",
+        "RebootMigration": "default"
+      },
+      "CurrentInstanceBootMode": "uefi",
+      "NetworkPerformanceOptions": {
+        "BandwidthWeighting": "default"
+      },
+      "Operator": {
+        "Managed": false
+      },
+      "InstanceId": "i-0e327d3391cc39942",
+      "ImageId": "ami-0cb938ea8bf5b7973",
+      "State": {
+        "Code": 16,
+        "Name": "running"
+      },
+      "PrivateDnsName": "ip-10-20-1-218.ap-southeast-2.compute.internal",
+      "PublicDnsName": "ec2-54-252-39-1.ap-southeast-2.compute.amazonaws.com",
+      "StateTransitionReason": "",
+      "KeyName": "hantt-practical-key",
+      "AmiLaunchIndex": 0,
+      "ProductCodes": [],
+      "InstanceType": "t3.micro",
+      "LaunchTime": "2026-07-29 00:58:35+00:00",
+      "Placement": {
+        "AvailabilityZoneId": "apse2-az1",
+        "GroupName": "",
+        "Tenancy": "default",
+        "AvailabilityZone": "ap-southeast-2a"
+      },
+      "Monitoring": {
+        "State": "disabled"
+      },
+      "SubnetId": "subnet-07b6c6ac532ec63cb",
+      "VpcId": "vpc-05f0938cb4149bd57",
+      "PrivateIpAddress": "10.20.1.218",
+      "PublicIpAddress": "54.252.39.1"
+    },
+    {
+      "Architecture": "x86_64",
+      "BlockDeviceMappings": [
+        {
+          "DeviceName": "/dev/xvda",
+          "Ebs": {
+            "AttachTime": "2026-07-29 01:54:39+00:00",
+            "DeleteOnTermination": true,
+            "Status": "attached",
+            "VolumeId": "vol-0b55170de14e081f1",
+            "EbsCardIndex": 0
+          }
+        }
+      ],
+      "ClientToken": "83143b46-bbcb-46e6-a298-ad3941f0989a",
+      "EbsOptimized": false,
+      "EnaSupport": true,
+      "Hypervisor": "xen",
+      "NetworkInterfaces": [
+        {
+          "Association": {
+            "IpOwnerId": "amazon",
+            "PublicDnsName": "ec2-3-25-54-118.ap-southeast-2.compute.amazonaws.com",
+            "PublicIp": "3.25.54.118"
+          },
+          "Attachment": {
+            "AttachTime": "2026-07-29 01:54:38+00:00",
+            "AttachmentId": "eni-attach-0b84325282171d728",
+            "DeleteOnTermination": true,
+            "DeviceIndex": 0,
+            "Status": "attached",
+            "NetworkCardIndex": 0
+          },
+          "Description": "",
+          "Groups": [
+            {
+              "GroupId": "sg-0f3c2458ecc6b0bc0",
+              "GroupName": "hantt-practical-nginx-sg"
+            }
+          ],
+          "Ipv6Addresses": [],
+          "MacAddress": "02:15:47:88:8f:4d",
+          "NetworkInterfaceId": "eni-06a6fd446bab31ed3",
+          "OwnerId": "561208252542",
+          "PrivateDnsName": "ip-10-20-1-234.ap-southeast-2.compute.internal",
+          "PrivateIpAddress": "10.20.1.234",
+          "PrivateIpAddresses": [
+            {
+              "Association": {
+                "IpOwnerId": "amazon",
+                "PublicDnsName": "ec2-3-25-54-118.ap-southeast-2.compute.amazonaws.com",
+                "PublicIp": "3.25.54.118"
+              },
+              "Primary": true,
+              "PrivateDnsName": "ip-10-20-1-234.ap-southeast-2.compute.internal",
+              "PrivateIpAddress": "10.20.1.234"
+            }
+          ],
+          "SourceDestCheck": true,
+          "Status": "in-use",
+          "SubnetId": "subnet-07b6c6ac532ec63cb",
+          "VpcId": "vpc-05f0938cb4149bd57",
+          "InterfaceType": "interface",
+          "Operator": {
+            "Managed": false
+          }
+        }
+      ],
+      "RootDeviceName": "/dev/xvda",
+      "RootDeviceType": "ebs",
+      "SecurityGroups": [
+        {
+          "GroupId": "sg-0f3c2458ecc6b0bc0",
+          "GroupName": "hantt-practical-nginx-sg"
+        }
+      ],
+      "SourceDestCheck": true,
+      "Tags": [
+        {
+          "Key": "Project",
+          "Value": "hantt-practical"
+        },
+        {
+          "Key": "Name",
+          "Value": "hantt-practical-ami-verify"
+        }
+      ],
+      "VirtualizationType": "hvm",
+      "CpuOptions": {
+        "CoreCount": 1,
+        "ThreadsPerCore": 2
+      },
+      "CapacityReservationSpecification": {
+        "CapacityReservationPreference": "open"
+      },
+      "HibernationOptions": {
+        "Configured": false
+      },
+      "MetadataOptions": {
+        "State": "applied",
+        "HttpTokens": "required",
+        "HttpPutResponseHopLimit": 2,
+        "HttpEndpoint": "enabled",
+        "HttpProtocolIpv6": "disabled",
+        "InstanceMetadataTags": "disabled"
+      },
+      "EnclaveOptions": {
+        "Enabled": false
+      },
+      "BootMode": "uefi-preferred",
+      "PlatformDetails": "Linux/UNIX",
+      "UsageOperation": "RunInstances",
+      "UsageOperationUpdateTime": "2026-07-29 01:54:38+00:00",
+      "PrivateDnsNameOptions": {
+        "HostnameType": "ip-name",
+        "EnableResourceNameDnsARecord": false,
+        "EnableResourceNameDnsAAAARecord": false
+      },
+      "MaintenanceOptions": {
+        "AutoRecovery": "default",
+        "RebootMigration": "default"
+      },
+      "CurrentInstanceBootMode": "uefi",
+      "NetworkPerformanceOptions": {
+        "BandwidthWeighting": "default"
+      },
+      "Operator": {
+        "Managed": false
+      },
+      "InstanceId": "i-01f5f188f868e8054",
+      "ImageId": "ami-06b7a47510e14e17f",
+      "State": {
+        "Code": 16,
+        "Name": "running"
+      },
+      "PrivateDnsName": "ip-10-20-1-234.ap-southeast-2.compute.internal",
+      "PublicDnsName": "ec2-3-25-54-118.ap-southeast-2.compute.amazonaws.com",
+      "StateTransitionReason": "",
+      "KeyName": "hantt-practical-key",
+      "AmiLaunchIndex": 0,
+      "ProductCodes": [],
+      "InstanceType": "t3.micro",
+      "LaunchTime": "2026-07-29 01:54:38+00:00",
+      "Placement": {
+        "AvailabilityZoneId": "apse2-az1",
+        "GroupName": "",
+        "Tenancy": "default",
+        "AvailabilityZone": "ap-southeast-2a"
+      },
+      "Monitoring": {
+        "State": "disabled"
+      },
+      "SubnetId": "subnet-07b6c6ac532ec63cb",
+      "VpcId": "vpc-05f0938cb4149bd57",
+      "PrivateIpAddress": "10.20.1.234",
+      "PublicIpAddress": "3.25.54.118"
+    }
+  ],
+  "images": [
+    {
+      "PlatformDetails": "Linux/UNIX",
+      "UsageOperation": "RunInstances",
+      "BlockDeviceMappings": [
+        {
+          "Ebs": {
+            "DeleteOnTermination": true,
+            "Iops": 3000,
+            "SnapshotId": "snap-0d7e4369b84649113",
+            "VolumeSize": 8,
+            "VolumeType": "gp3",
+            "Throughput": 125,
+            "Encrypted": false
+          },
+          "DeviceName": "/dev/xvda"
+        }
+      ],
+      "Description": "Amazon Linux 2023 with nginx + self-signed HTTPS, baked by Packer + Ansible",
+      "EnaSupport": true,
+      "Hypervisor": "xen",
+      "Name": "hantt-nginx-https-1785287779",
+      "RootDeviceName": "/dev/xvda",
+      "RootDeviceType": "ebs",
+      "SriovNetSupport": "simple",
+      "Tags": [
+        {
+          "Key": "ManagedBy",
+          "Value": "packer"
+        },
+        {
+          "Key": "Name",
+          "Value": "hantt-nginx-https"
+        },
+        {
+          "Key": "Project",
+          "Value": "hantt-practical"
+        }
+      ],
+      "VirtualizationType": "hvm",
+      "BootMode": "uefi-preferred",
+      "ImdsSupport": "v2.0",
+      "SourceInstanceId": "i-0102909541afe9bc4",
+      "DeregistrationProtection": "disabled",
+      "SourceImageId": "ami-0b519d86134871cb6",
+      "SourceImageRegion": "ap-southeast-2",
+      "FreeTierEligible": true,
+      "ImageId": "ami-06b7a47510e14e17f",
+      "ImageLocation": "561208252542/hantt-nginx-https-1785287779",
+      "State": "available",
+      "OwnerId": "561208252542",
+      "CreationDate": "2026-07-29T01:19:13.000Z",
+      "Public": false,
+      "Architecture": "x86_64",
+      "ImageType": "machine"
+    }
+  ],
+  "key_pairs": [
+    {
+      "KeyPairId": "key-0d87586243edac734",
+      "KeyType": "rsa",
+      "Tags": [
+        {
+          "Key": "Project",
+          "Value": "hantt-practical"
+        },
+        {
+          "Key": "ManagedBy",
+          "Value": "terraform"
+        }
+      ],
+      "CreateTime": "2026-07-29 00:58:22.755000+00:00",
+      "KeyName": "hantt-practical-key",
+      "KeyFingerprint": "08:b3:f9:2c:eb:74:87:71:7d:c7:8c:92:28:66:fd:2e"
+    }
+  ],
+  "iam_role": {
+    "Path": "/",
+    "RoleName": "hantt-practical-ec2-role",
+    "RoleId": "AROAYFKU6LB7I2WCWU4FW",
+    "Arn": "arn:aws:iam::561208252542:role/hantt-practical-ec2-role",
+    "CreateDate": "2026-07-29 00:58:22+00:00",
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "ec2.amazonaws.com"
+          },
+          "Action": "sts:AssumeRole"
+        }
+      ]
+    },
+    "MaxSessionDuration": 3600,
+    "Tags": [
+      {
+        "Key": "ManagedBy",
+        "Value": "terraform"
+      },
+      {
+        "Key": "Project",
+        "Value": "hantt-practical"
+      }
+    ],
+    "RoleLastUsed": {
+      "LastUsedDate": "2026-07-29 01:49:19+00:00",
+      "Region": "ap-southeast-2"
+    }
+  },
+  "iam_attached_policies": [
+    {
+      "PolicyName": "AmazonSSMManagedInstanceCore",
+      "PolicyArn": "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
+    }
+  ]
+}
