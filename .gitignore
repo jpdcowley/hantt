@@ -1,0 +1,9 @@
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+.terraform.lock.hcl
+*.pem
+*.key
+crash.log
+packer_cache/
