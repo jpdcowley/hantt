@@ -1,5 +1,5 @@
 {
-  "captured_at": "2026-07-29T14:05:11.352456",
+  "captured_at": "2026-07-29T15:50:05.108233",
   "region": "ap-southeast-2",
   "project_tag": "hantt-practical",
   "vpcs": [
@@ -75,7 +75,7 @@
       "State": "available",
       "VpcId": "vpc-05f0938cb4149bd57",
       "CidrBlock": "10.20.1.0/24",
-      "AvailableIpAddressCount": 249,
+      "AvailableIpAddressCount": 248,
       "AvailabilityZone": "ap-southeast-2a",
       "DefaultForAz": false,
       "MapPublicIpOnLaunch": true
@@ -342,7 +342,35 @@
           "IpRanges": [
             {
               "Description": "SSH",
-              "CidrIp": "0.0.0.0/0"
+              "CidrIp": "203.211.107.95/32"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        },
+        {
+          "IpProtocol": "tcp",
+          "FromPort": 5986,
+          "ToPort": 5986,
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "Description": "WinRM HTTPS (Ansible)",
+              "CidrIp": "203.211.107.95/32"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        },
+        {
+          "IpProtocol": "tcp",
+          "FromPort": 3389,
+          "ToPort": 3389,
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "Description": "RDP (troubleshooting)",
+              "CidrIp": "203.211.107.95/32"
             }
           ],
           "Ipv6Ranges": [],
@@ -357,6 +385,20 @@
             {
               "Description": "HTTPS",
               "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        },
+        {
+          "IpProtocol": "tcp",
+          "FromPort": 5985,
+          "ToPort": 5985,
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "Description": "WinRM HTTP (Ansible)",
+              "CidrIp": "203.211.107.95/32"
             }
           ],
           "Ipv6Ranges": [],
@@ -687,6 +729,171 @@
       "VpcId": "vpc-05f0938cb4149bd57",
       "PrivateIpAddress": "10.20.1.234",
       "PublicIpAddress": "3.25.54.118"
+    },
+    {
+      "Architecture": "x86_64",
+      "BlockDeviceMappings": [
+        {
+          "DeviceName": "/dev/sda1",
+          "Ebs": {
+            "AttachTime": "2026-07-29 02:54:12+00:00",
+            "DeleteOnTermination": true,
+            "Status": "attached",
+            "VolumeId": "vol-0a772d0e93c78e2a6",
+            "EbsCardIndex": 0
+          }
+        }
+      ],
+      "ClientToken": "terraform-lReNA8NMepUVmRPxlkuvQQtOuP",
+      "EbsOptimized": false,
+      "EnaSupport": true,
+      "Hypervisor": "xen",
+      "IamInstanceProfile": {
+        "Arn": "arn:aws:iam::561208252542:instance-profile/hantt-practical-ec2-profile",
+        "Id": "AIPAYFKU6LB7ACKWCBUA2"
+      },
+      "NetworkInterfaces": [
+        {
+          "Association": {
+            "IpOwnerId": "amazon",
+            "PublicDnsName": "ec2-54-252-194-95.ap-southeast-2.compute.amazonaws.com",
+            "PublicIp": "54.252.194.95"
+          },
+          "Attachment": {
+            "AttachTime": "2026-07-29 02:54:11+00:00",
+            "AttachmentId": "eni-attach-055e402e05cf1c684",
+            "DeleteOnTermination": true,
+            "DeviceIndex": 0,
+            "Status": "attached",
+            "NetworkCardIndex": 0
+          },
+          "Description": "",
+          "Groups": [
+            {
+              "GroupId": "sg-0f3c2458ecc6b0bc0",
+              "GroupName": "hantt-practical-nginx-sg"
+            }
+          ],
+          "Ipv6Addresses": [],
+          "MacAddress": "02:a5:9d:63:1d:2f",
+          "NetworkInterfaceId": "eni-05912bbc5d171f1d1",
+          "OwnerId": "561208252542",
+          "PrivateDnsName": "ip-10-20-1-177.ap-southeast-2.compute.internal",
+          "PrivateIpAddress": "10.20.1.177",
+          "PrivateIpAddresses": [
+            {
+              "Association": {
+                "IpOwnerId": "amazon",
+                "PublicDnsName": "ec2-54-252-194-95.ap-southeast-2.compute.amazonaws.com",
+                "PublicIp": "54.252.194.95"
+              },
+              "Primary": true,
+              "PrivateDnsName": "ip-10-20-1-177.ap-southeast-2.compute.internal",
+              "PrivateIpAddress": "10.20.1.177"
+            }
+          ],
+          "SourceDestCheck": true,
+          "Status": "in-use",
+          "SubnetId": "subnet-07b6c6ac532ec63cb",
+          "VpcId": "vpc-05f0938cb4149bd57",
+          "InterfaceType": "interface",
+          "Operator": {
+            "Managed": false
+          }
+        }
+      ],
+      "RootDeviceName": "/dev/sda1",
+      "RootDeviceType": "ebs",
+      "SecurityGroups": [
+        {
+          "GroupId": "sg-0f3c2458ecc6b0bc0",
+          "GroupName": "hantt-practical-nginx-sg"
+        }
+      ],
+      "SourceDestCheck": true,
+      "Tags": [
+        {
+          "Key": "ManagedBy",
+          "Value": "terraform"
+        },
+        {
+          "Key": "Name",
+          "Value": "hantt-practical-nginx-windows"
+        },
+        {
+          "Key": "Project",
+          "Value": "hantt-practical"
+        }
+      ],
+      "VirtualizationType": "hvm",
+      "CpuOptions": {
+        "CoreCount": 1,
+        "ThreadsPerCore": 2
+      },
+      "CapacityReservationSpecification": {
+        "CapacityReservationPreference": "open"
+      },
+      "HibernationOptions": {
+        "Configured": false
+      },
+      "MetadataOptions": {
+        "State": "applied",
+        "HttpTokens": "required",
+        "HttpPutResponseHopLimit": 1,
+        "HttpEndpoint": "enabled",
+        "HttpProtocolIpv6": "disabled",
+        "InstanceMetadataTags": "disabled"
+      },
+      "EnclaveOptions": {
+        "Enabled": false
+      },
+      "PlatformDetails": "Windows",
+      "UsageOperation": "RunInstances:0002",
+      "UsageOperationUpdateTime": "2026-07-29 02:54:11+00:00",
+      "PrivateDnsNameOptions": {
+        "HostnameType": "ip-name",
+        "EnableResourceNameDnsARecord": false,
+        "EnableResourceNameDnsAAAARecord": false
+      },
+      "MaintenanceOptions": {
+        "AutoRecovery": "default",
+        "RebootMigration": "default"
+      },
+      "CurrentInstanceBootMode": "legacy-bios",
+      "NetworkPerformanceOptions": {
+        "BandwidthWeighting": "default"
+      },
+      "Operator": {
+        "Managed": false
+      },
+      "InstanceId": "i-0cf7cde3d54e3a2c8",
+      "ImageId": "ami-0d50718a549a2bc15",
+      "State": {
+        "Code": 16,
+        "Name": "running"
+      },
+      "PrivateDnsName": "ip-10-20-1-177.ap-southeast-2.compute.internal",
+      "PublicDnsName": "ec2-54-252-194-95.ap-southeast-2.compute.amazonaws.com",
+      "StateTransitionReason": "",
+      "KeyName": "hantt-practical-key",
+      "AmiLaunchIndex": 0,
+      "ProductCodes": [],
+      "InstanceType": "t3.medium",
+      "LaunchTime": "2026-07-29 02:54:11+00:00",
+      "Placement": {
+        "AvailabilityZoneId": "apse2-az1",
+        "GroupName": "",
+        "Tenancy": "default",
+        "AvailabilityZone": "ap-southeast-2a"
+      },
+      "Platform": "windows",
+      "Monitoring": {
+        "State": "disabled"
+      },
+      "SubnetId": "subnet-07b6c6ac532ec63cb",
+      "VpcId": "vpc-05f0938cb4149bd57",
+      "PrivateIpAddress": "10.20.1.177",
+      "PublicIpAddress": "54.252.194.95"
     }
   ],
   "images": [
@@ -733,6 +940,7 @@
       "ImdsSupport": "v2.0",
       "SourceInstanceId": "i-0102909541afe9bc4",
       "DeregistrationProtection": "disabled",
+      "LastLaunchedTime": "2026-07-29T01:54:38Z",
       "SourceImageId": "ami-0b519d86134871cb6",
       "SourceImageRegion": "ap-southeast-2",
       "FreeTierEligible": true,
@@ -744,6 +952,162 @@
       "Public": false,
       "Architecture": "x86_64",
       "ImageType": "machine"
+    },
+    {
+      "PlatformDetails": "Windows",
+      "UsageOperation": "RunInstances:0002",
+      "BlockDeviceMappings": [
+        {
+          "Ebs": {
+            "DeleteOnTermination": true,
+            "SnapshotId": "snap-0f5228990c27e9096",
+            "VolumeSize": 30,
+            "VolumeType": "gp2",
+            "Encrypted": false
+          },
+          "DeviceName": "/dev/sda1"
+        },
+        {
+          "DeviceName": "xvdca",
+          "VirtualName": "ephemeral0"
+        },
+        {
+          "DeviceName": "xvdcb",
+          "VirtualName": "ephemeral1"
+        },
+        {
+          "DeviceName": "xvdcc",
+          "VirtualName": "ephemeral2"
+        },
+        {
+          "DeviceName": "xvdcd",
+          "VirtualName": "ephemeral3"
+        },
+        {
+          "DeviceName": "xvdce",
+          "VirtualName": "ephemeral4"
+        },
+        {
+          "DeviceName": "xvdcf",
+          "VirtualName": "ephemeral5"
+        },
+        {
+          "DeviceName": "xvdcg",
+          "VirtualName": "ephemeral6"
+        },
+        {
+          "DeviceName": "xvdch",
+          "VirtualName": "ephemeral7"
+        },
+        {
+          "DeviceName": "xvdci",
+          "VirtualName": "ephemeral8"
+        },
+        {
+          "DeviceName": "xvdcj",
+          "VirtualName": "ephemeral9"
+        },
+        {
+          "DeviceName": "xvdck",
+          "VirtualName": "ephemeral10"
+        },
+        {
+          "DeviceName": "xvdcl",
+          "VirtualName": "ephemeral11"
+        },
+        {
+          "DeviceName": "xvdcm",
+          "VirtualName": "ephemeral12"
+        },
+        {
+          "DeviceName": "xvdcn",
+          "VirtualName": "ephemeral13"
+        },
+        {
+          "DeviceName": "xvdco",
+          "VirtualName": "ephemeral14"
+        },
+        {
+          "DeviceName": "xvdcp",
+          "VirtualName": "ephemeral15"
+        },
+        {
+          "DeviceName": "xvdcq",
+          "VirtualName": "ephemeral16"
+        },
+        {
+          "DeviceName": "xvdcr",
+          "VirtualName": "ephemeral17"
+        },
+        {
+          "DeviceName": "xvdcs",
+          "VirtualName": "ephemeral18"
+        },
+        {
+          "DeviceName": "xvdct",
+          "VirtualName": "ephemeral19"
+        },
+        {
+          "DeviceName": "xvdcu",
+          "VirtualName": "ephemeral20"
+        },
+        {
+          "DeviceName": "xvdcv",
+          "VirtualName": "ephemeral21"
+        },
+        {
+          "DeviceName": "xvdcw",
+          "VirtualName": "ephemeral22"
+        },
+        {
+          "DeviceName": "xvdcx",
+          "VirtualName": "ephemeral23"
+        },
+        {
+          "DeviceName": "xvdcy",
+          "VirtualName": "ephemeral24"
+        },
+        {
+          "DeviceName": "xvdcz",
+          "VirtualName": "ephemeral25"
+        }
+      ],
+      "Description": "Windows Server 2022 with nginx + self-signed HTTPS, baked by Packer + Ansible",
+      "EnaSupport": true,
+      "Hypervisor": "xen",
+      "Name": "hantt-nginx-https-windows-1785295502",
+      "RootDeviceName": "/dev/sda1",
+      "RootDeviceType": "ebs",
+      "SriovNetSupport": "simple",
+      "Tags": [
+        {
+          "Key": "ManagedBy",
+          "Value": "packer"
+        },
+        {
+          "Key": "Name",
+          "Value": "hantt-nginx-https-windows"
+        },
+        {
+          "Key": "Project",
+          "Value": "hantt-practical"
+        }
+      ],
+      "VirtualizationType": "hvm",
+      "SourceInstanceId": "i-083bf8daaabcc2ff6",
+      "DeregistrationProtection": "disabled",
+      "SourceImageId": "ami-0d50718a549a2bc15",
+      "SourceImageRegion": "ap-southeast-2",
+      "FreeTierEligible": true,
+      "ImageId": "ami-0ec8978508e519792",
+      "ImageLocation": "561208252542/hantt-nginx-https-windows-1785295502",
+      "State": "available",
+      "OwnerId": "561208252542",
+      "CreationDate": "2026-07-29T03:41:48.000Z",
+      "Public": false,
+      "Architecture": "x86_64",
+      "ImageType": "machine",
+      "Platform": "windows"
     }
   ],
   "key_pairs": [
@@ -795,7 +1159,7 @@
       }
     ],
     "RoleLastUsed": {
-      "LastUsedDate": "2026-07-29 01:49:19+00:00",
+      "LastUsedDate": "2026-07-29 03:35:42+00:00",
       "Region": "ap-southeast-2"
     }
   },

@@ -1,6 +1,6 @@
 # Hantt Practical - Live Resource Evidence
 
-Captured: 2026-07-29T14:05:11.352456  |  Region: ap-southeast-2  |  Tag: Project=hantt-practical
+Captured: 2026-07-29T15:50:05.108233  |  Region: ap-southeast-2  |  Tag: Project=hantt-practical
 
 | Resource | ID / Name | Detail |
 |---|---|---|
@@ -10,9 +10,11 @@ Captured: 2026-07-29T14:05:11.352456  |  Region: ap-southeast-2  |  Tag: Project
 | Subnet | subnet-09a432c165ad62558 | 10.20.2.0/24 ap-southeast-2b hantt-practical-public-2 |
 | Subnet | subnet-0f403fd5cc75aaa69 | 10.20.11.0/24 ap-southeast-2a hantt-practical-private-1 |
 | IGW | igw-0b9633240a01cfd0b | attached to 1 VPC(s) |
-| Security Group | sg-0f3c2458ecc6b0bc0 | ingress ports [22, 80, 443] |
+| Security Group | sg-0f3c2458ecc6b0bc0 | ingress ports [22, 80, 443, 3389, 5985, 5986] |
 | EC2 | i-0e327d3391cc39942 | t3.micro running 54.252.39.1 hantt-practical-nginx |
 | EC2 | i-01f5f188f868e8054 | t3.micro running 3.25.54.118 hantt-practical-ami-verify |
+| EC2 | i-0cf7cde3d54e3a2c8 | t3.medium running 54.252.194.95 hantt-practical-nginx-windows |
 | AMI | ami-06b7a47510e14e17f | hantt-nginx-https-1785287779 available |
+| AMI | ami-0ec8978508e519792 | hantt-nginx-https-windows-1785295502 available |
 | Key Pair | hantt-practical-key | rsa |
 | IAM Role | hantt-practical-ec2-role | AmazonSSMManagedInstanceCore |

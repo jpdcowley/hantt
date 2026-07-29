@@ -104,6 +104,16 @@
     "built_local": "2026-07-29 ~13:20 NZST",
     "build_time": "6m07s",
     "teardown_note": "deregister AMI + delete snapshot manually - not tracked by terraform state",
-    "windows_leg": "pending"
+    "windows_leg": {
+      "status": "complete",
+      "windows_ec2": {
+        "id": "i-0cf7cde3d54e3a2c8",
+        "public_ip": "54.252.194.95"
+      },
+      "windows_ami_id": "ami-0ec8978508e519792",
+      "windows_ami_name": "hantt-nginx-https-windows-1785295502",
+      "windows_snapshot_id": "snap-0f5228990c27e9096",
+      "build_time": "20m15s"
+    }
   }
 }
